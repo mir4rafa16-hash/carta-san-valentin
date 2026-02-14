@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>💕 Feliz San Valentín 💕</title>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;600;700&family=Great+Vibes&display=swap"
+        rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -21,6 +24,10 @@
             font-family: 'Playfair Display', serif;
             overflow: hidden;
             position: relative;
+        }
+
+        body.letter-open {
+            overflow: visible;
         }
 
         /* Floating Hearts Background */
@@ -49,12 +56,15 @@
                 transform: translateY(100vh) rotate(0deg) scale(0.5);
                 opacity: 0;
             }
+
             10% {
                 opacity: 0.8;
             }
+
             90% {
                 opacity: 0.6;
             }
+
             100% {
                 transform: translateY(-100px) rotate(720deg) scale(1.2);
                 opacity: 0;
@@ -74,8 +84,17 @@
         }
 
         @keyframes sparkleAnim {
-            0%, 100% { opacity: 0; transform: scale(0); }
-            50% { opacity: 1; transform: scale(1); }
+
+            0%,
+            100% {
+                opacity: 0;
+                transform: scale(0);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
 
         /* Main Container */
@@ -100,8 +119,17 @@
         }
 
         @keyframes pulse {
-            0%, 100% { opacity: 0.7; transform: scale(1); }
-            50% { opacity: 1; transform: scale(1.05); }
+
+            0%,
+            100% {
+                opacity: 0.7;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.05);
+            }
         }
 
         /* Heart Card */
@@ -138,10 +166,10 @@
             height: 260px;
             background: linear-gradient(135deg, #ff3366, #e91e63, #c2185b);
             border-radius: 160px 160px 0 0;
-            box-shadow: 
+            box-shadow:
                 0 0 30px rgba(255, 51, 102, 0.5),
-                inset 0 -15px 30px rgba(0,0,0,0.15),
-                inset 0 15px 30px rgba(255,255,255,0.15);
+                inset 0 -15px 30px rgba(0, 0, 0, 0.15),
+                inset 0 15px 30px rgba(255, 255, 255, 0.15);
         }
 
         .heart-shape::before {
@@ -193,8 +221,17 @@
         }
 
         @keyframes heartGlow {
-            0%, 100% { opacity: 0.3; transform: scale(1); }
-            50% { opacity: 0.6; transform: scale(1.08); }
+
+            0%,
+            100% {
+                opacity: 0.3;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.6;
+                transform: scale(1.08);
+            }
         }
 
         /* Heart beat animation */
@@ -203,11 +240,27 @@
         }
 
         @keyframes heartBeat {
-            0%, 100% { transform: scale(1); }
-            15% { transform: scale(1.1); }
-            30% { transform: scale(1); }
-            45% { transform: scale(1.08); }
-            60% { transform: scale(1); }
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            15% {
+                transform: scale(1.1);
+            }
+
+            30% {
+                transform: scale(1);
+            }
+
+            45% {
+                transform: scale(1.08);
+            }
+
+            60% {
+                transform: scale(1);
+            }
         }
 
         /* Text on the heart */
@@ -221,7 +274,7 @@
             color: white;
             font-family: 'Great Vibes', cursive;
             font-size: 2rem;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
             white-space: nowrap;
             transition: opacity 0.5s ease;
         }
@@ -258,14 +311,15 @@
             width: 100%;
             height: 100%;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             justify-content: center;
             z-index: 100;
             opacity: 0;
             pointer-events: none;
             transition: opacity 0.8s ease;
             overflow-y: auto;
-            padding: 20px;
+            -webkit-overflow-scrolling: touch;
+            padding: 30px 15px;
         }
 
         .letter-container.visible {
@@ -279,7 +333,7 @@
             padding: 50px 40px;
             max-width: 550px;
             width: 100%;
-            box-shadow: 
+            box-shadow:
                 0 25px 80px rgba(255, 51, 102, 0.3),
                 0 0 0 1px rgba(255, 182, 193, 0.3),
                 inset 0 0 80px rgba(255, 182, 193, 0.1);
@@ -287,7 +341,8 @@
             transition: transform 1s cubic-bezier(0.34, 1.56, 0.64, 1);
             position: relative;
             overflow: hidden;
-            margin: auto;
+            margin: 0 auto;
+            flex-shrink: 0;
         }
 
         .letter-container.visible .letter {
@@ -314,10 +369,23 @@
         }
 
         @keyframes cornerSpin {
-            0%, 100% { transform: rotate(0deg) scale(1); }
-            25% { transform: rotate(10deg) scale(1.1); }
-            50% { transform: rotate(0deg) scale(1.2); }
-            75% { transform: rotate(-10deg) scale(1.1); }
+
+            0%,
+            100% {
+                transform: rotate(0deg) scale(1);
+            }
+
+            25% {
+                transform: rotate(10deg) scale(1.1);
+            }
+
+            50% {
+                transform: rotate(0deg) scale(1.2);
+            }
+
+            75% {
+                transform: rotate(-10deg) scale(1.1);
+            }
         }
 
         /* Photo section */
@@ -328,7 +396,7 @@
             border-radius: 20px;
             overflow: hidden;
             border: 4px solid #ff6b8a;
-            box-shadow: 
+            box-shadow:
                 0 10px 30px rgba(255, 107, 138, 0.4),
                 0 0 0 8px rgba(255, 182, 193, 0.2);
             position: relative;
@@ -341,8 +409,13 @@
         }
 
         @keyframes photoReveal {
-            0% { transform: scale(0) rotate(-10deg); }
-            100% { transform: scale(1) rotate(0deg); }
+            0% {
+                transform: scale(0) rotate(-10deg);
+            }
+
+            100% {
+                transform: scale(1) rotate(0deg);
+            }
         }
 
         .photo-frame img {
@@ -370,18 +443,60 @@
             opacity: 0.8;
         }
 
-        .photo-heart:nth-child(1) { top: -10px; left: 50%; animation-delay: 0s; }
-        .photo-heart:nth-child(2) { top: 20%; right: -15px; animation-delay: 0.6s; }
-        .photo-heart:nth-child(3) { bottom: -10px; left: 50%; animation-delay: 1.2s; }
-        .photo-heart:nth-child(4) { top: 20%; left: -15px; animation-delay: 1.8s; }
-        .photo-heart:nth-child(5) { top: 60%; right: -15px; animation-delay: 2.4s; }
-        .photo-heart:nth-child(6) { top: 60%; left: -15px; animation-delay: 3s; }
+        .photo-heart:nth-child(1) {
+            top: -10px;
+            left: 50%;
+            animation-delay: 0s;
+        }
+
+        .photo-heart:nth-child(2) {
+            top: 20%;
+            right: -15px;
+            animation-delay: 0.6s;
+        }
+
+        .photo-heart:nth-child(3) {
+            bottom: -10px;
+            left: 50%;
+            animation-delay: 1.2s;
+        }
+
+        .photo-heart:nth-child(4) {
+            top: 20%;
+            left: -15px;
+            animation-delay: 1.8s;
+        }
+
+        .photo-heart:nth-child(5) {
+            top: 60%;
+            right: -15px;
+            animation-delay: 2.4s;
+        }
+
+        .photo-heart:nth-child(6) {
+            top: 60%;
+            left: -15px;
+            animation-delay: 3s;
+        }
 
         @keyframes orbitHeart {
-            0%, 100% { transform: scale(1) translateY(0); }
-            25% { transform: scale(1.3) translateY(-5px); }
-            50% { transform: scale(1) translateY(0); }
-            75% { transform: scale(1.2) translateY(3px); }
+
+            0%,
+            100% {
+                transform: scale(1) translateY(0);
+            }
+
+            25% {
+                transform: scale(1.3) translateY(-5px);
+            }
+
+            50% {
+                transform: scale(1) translateY(0);
+            }
+
+            75% {
+                transform: scale(1.2) translateY(3px);
+            }
         }
 
         /* Title */
@@ -460,10 +575,23 @@
         }
 
         @keyframes heartBeatSig {
-            0%, 100% { transform: scale(1); }
-            15% { transform: scale(1.2); }
-            30% { transform: scale(1); }
-            45% { transform: scale(1.15); }
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            15% {
+                transform: scale(1.2);
+            }
+
+            30% {
+                transform: scale(1);
+            }
+
+            45% {
+                transform: scale(1.15);
+            }
         }
 
         /* Decorative line */
@@ -516,9 +644,11 @@
                 opacity: 0;
                 transform: translateY(-20px) rotate(0deg);
             }
+
             10% {
                 opacity: 0.8;
             }
+
             100% {
                 opacity: 0;
                 transform: translateY(100vh) rotate(720deg);
@@ -539,6 +669,7 @@
                 opacity: 1;
                 transform: translate(0, 0) scale(0.5);
             }
+
             100% {
                 opacity: 0;
                 transform: translate(var(--tx), var(--ty)) scale(1.5) rotate(360deg);
@@ -583,23 +714,27 @@
                 font-size: 1.6rem;
             }
 
+            .letter-container {
+                padding: 20px 10px;
+            }
+
             .letter {
-                padding: 40px 25px;
+                padding: 40px 20px;
                 border-radius: 25px;
-                margin: 10px;
+                margin: 0 auto;
             }
 
             .letter-title {
-                font-size: 2.2rem;
+                font-size: 2rem;
             }
 
             .letter-body {
-                font-size: 1.15rem;
+                font-size: 1.1rem;
             }
 
             .photo-frame {
-                width: 180px;
-                height: 230px;
+                width: 170px;
+                height: 220px;
             }
 
             .instruction {
@@ -643,6 +778,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <!-- Floating Hearts Background -->
@@ -654,7 +790,7 @@
     <!-- Main Container -->
     <div class="container">
         <div class="instruction" id="instruction">Toca el corazón para abrirlo 💌</div>
-        
+
         <div class="heart-card" id="heartCard" onclick="openHeart()">
             <div class="heart-glow"></div>
             <div class="heart-shape"></div>
@@ -673,9 +809,9 @@
         <div class="letter">
             <div class="letter-title" id="letterTitle">¡Feliz San Valentín!</div>
             <div class="title-hearts" id="titleHearts">💖✨💕✨💖</div>
-            
+
             <div class="decorative-line" id="decLine"></div>
-            
+
             <div class="photo-section">
                 <div class="photo-frame" id="photoFrame">
                     <img src="foto.jpg" alt="Mi amor">
@@ -691,7 +827,10 @@
             </div>
 
             <div class="letter-body" id="letterBody">
-                Es nuestro primer San Valentín juntos y eso me pone muy feliz. Nuestro amor va creciendo cada día más y ya no aguanto las ganas de poder verte pronto. Sé que no podemos hablar todo lo que quisiéramos pero eso no evita que nuestro cariño aumente cada día. Me tienes muy enamorado y te has convertido en una persona muy importante para mí. Te quiero y te amo con locura mi niña preciosa.
+                Es nuestro primer San Valentín juntos y eso me pone muy feliz. Nuestro amor va creciendo cada día más y
+                ya no aguanto las ganas de poder verte pronto. Sé que no podemos hablar todo lo que quisiéramos pero eso
+                no evita que nuestro cariño aumente cada día. Me tienes muy enamorado y te has convertido en una persona
+                muy importante para mí. Te quiero y te amo con locura mi niña preciosa.
             </div>
 
             <div class="decorative-line" id="decLine2"></div>
@@ -707,7 +846,7 @@
         function createFloatingHearts() {
             const container = document.getElementById('floatingHearts');
             const hearts = ['❤️', '💕', '💖', '💗', '💝', '💘', '♥️', '💞', '💓', '💛'];
-            
+
             for (let i = 0; i < 30; i++) {
                 const heart = document.createElement('span');
                 heart.className = 'floating-heart';
@@ -747,14 +886,14 @@
                 heart.style.left = centerX + 'px';
                 heart.style.top = centerY + 'px';
                 heart.style.fontSize = (Math.random() * 20 + 15) + 'px';
-                
+
                 const angle = (Math.PI * 2 / 20) * i;
                 const distance = Math.random() * 300 + 100;
                 heart.style.setProperty('--tx', Math.cos(angle) * distance + 'px');
                 heart.style.setProperty('--ty', Math.sin(angle) * distance + 'px');
-                
+
                 document.body.appendChild(heart);
-                
+
                 setTimeout(() => heart.remove(), 1500);
             }
         }
@@ -771,7 +910,7 @@
                     petal.style.width = (Math.random() * 10 + 8) + 'px';
                     petal.style.height = (Math.random() * 10 + 8) + 'px';
                     document.body.appendChild(petal);
-                    
+
                     setTimeout(() => petal.remove(), 7000);
                 }, i * 200);
             }
@@ -804,8 +943,10 @@
 
             // Show letter
             setTimeout(() => {
+                document.body.classList.add('letter-open');
                 letterContainer.classList.add('visible');
-                
+                letterContainer.scrollTop = 0;
+
                 // Trigger animations
                 document.getElementById('letterTitle').classList.add('animate');
                 document.getElementById('titleHearts').classList.add('animate');
@@ -840,4 +981,5 @@
         }, 800);
     </script>
 </body>
+
 </html>
